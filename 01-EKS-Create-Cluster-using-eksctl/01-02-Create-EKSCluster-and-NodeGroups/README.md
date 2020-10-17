@@ -92,6 +92,11 @@ eksctl create nodegroup --cluster=eksdemo1 \
 
 ## Step-05: Verify Cluster & Nodes
 
+kubectl get nodes
+
+kubectl get nodes -o wide  (Get additional detail)
+
+
 ### Verify NodeGroup subnets to confirm EC2 Instances are in Public Subnet
 - Verify the node group subnet to ensure it created in public subnets
   - Go to Services -> EKS -> eksdemo -> eksdemo1-ng1-public
