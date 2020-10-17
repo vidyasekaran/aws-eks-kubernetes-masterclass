@@ -146,6 +146,31 @@ ssh -i kube-demo.pem ec2-user@<Public-IP-of-Worker-Node>
 Use putty
 ```
 
+###Check volume size in workernode
+ssh into worker node and execute - df -h 
+
+$ ssh -i kube-demo.pem ec2-user@13.233.48.107
+load pubkey "kube-demo.pem": invalid format
+Last login: Wed Oct  7 19:05:48 2020 from 205.251.233.50
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-192-168-52-1 ~]$ ls -ltr
+total 0
+[ec2-user@ip-192-168-52-1 ~]$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        479M     0  479M   0% /dev
+tmpfs           492M     0  492M   0% /dev/shm
+tmpfs           492M  688K  491M   1% /run
+tmpfs           492M     0  492M   0% /sys/fs/cgroup
+/dev/xvda1      5.0G  2.2G  2.9G  43% /
+tmpfs            99M     0   99M   0% /run/user/0
+tmpfs            99M     0   99M   0% /run/user/1000
+
+
 ## Step-06: Update Worker Nodes Security Group to allow all traffic
 - We need to allow `All Traffic` on worker node security group
 
