@@ -170,6 +170,8 @@ tmpfs           492M     0  492M   0% /sys/fs/cgroup
 tmpfs            99M     0   99M   0% /run/user/0
 tmpfs            99M     0   99M   0% /run/user/1000
 
+## worker node security group - inbound  all protocol , anywhere is added -- so if you get error while submiting worker node check this....
+
 
 ## Step-06: Update Worker Nodes Security Group to allow all traffic
 - We need to allow `All Traffic` on worker node security group
