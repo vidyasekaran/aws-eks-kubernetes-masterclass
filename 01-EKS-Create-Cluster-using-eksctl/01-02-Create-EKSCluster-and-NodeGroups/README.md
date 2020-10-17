@@ -140,6 +140,8 @@ kubectl config view --minify
 # For MAC or Linux or Windows10
 ssh -i kube-demo.pem ec2-user@<Public-IP-of-Worker-Node>
 
+- I used bash as i got permission issue with respect to kube-demo.pem
+
 # For Windows 7
 Use putty
 ```
