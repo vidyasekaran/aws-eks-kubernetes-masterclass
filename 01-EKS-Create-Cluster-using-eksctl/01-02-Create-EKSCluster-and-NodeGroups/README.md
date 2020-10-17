@@ -22,14 +22,17 @@ eksctl create cluster --name=eksdemo1 \
                       --without-nodegroup 
 
 # Get List of clusters
+
 eksctl get clusters
 
 # Get any nodes present
+
 kubectl get nodes
 No resources found in default namespace.
 ```
 
 #Check to see if every resource requested is created propertly
+
 eksctl utils describe-stacks --region=ap-south-1 --cluster=eksdemo1
 
 ## Step-02: Create & Associate IAM OIDC Provider for our EKS Cluster
