@@ -21,7 +21,7 @@ eksctl create cluster --name=eksdemo1 \
                       --zones=us-east-1a,us-east-1b \
                       --without-nodegroup 
 # Example:                      
-eksctl create cluster --name=eksdemo1 --region=ap-south-1 --zones=ap-south-1a,ap-south-1b --without-nodegroup 
+eksctl create cluster --name=eksdemo2 --region=ap-south-1 --zones=ap-south-1a,ap-south-1b --without-nodegroup 
 
 # Get List of clusters
 
@@ -61,12 +61,15 @@ eksctl utils associate-iam-oidc-provider \
     --region us-east-1 \
     --cluster eksdemo1 \
     --approve
+    
+Example :
+eksctl utils associate-iam-oidc-provider --region ap-south-1 --cluster eksdemo2  --approve
 ```
 
 
 
 ## Step-03: Create EC2 Keypair
-- Create a new EC2 Keypair with name as `kube-demo`
+- Create a new EC2 Keypair with name as `kube-demo`  (Stored in local : D:\Udemy_aws_kubernetes_Kalyan)
 - This keypair we will use it when creating the EKS NodeGroup.
 - This will help us to login to the EKS Worker Nodes using Terminal.
 
@@ -90,7 +93,11 @@ eksctl create nodegroup --cluster=eksdemo1 \
                         --full-ecr-access \
                         --appmesh-access \
                         --alb-ingress-access 
-```
+                        
+Example: 
+
+eksctl create nodegroup --cluster=eksdemo2  --region=ap-south-1 --name=eksdemo2-ng-public2 --node-type=t2.micro --nodes=2 --nodes-min=2 --nodes-max=4 --node-volume-size=20  \
+--ssh-access --ssh-public-key=kube-demo --managed --asg-access --external-dns-access --full-ecr-access --appmesh-access --alb-ingress-access
 
 ## Step-05: Verify Cluster & Nodes
 
