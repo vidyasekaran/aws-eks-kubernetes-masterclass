@@ -20,6 +20,11 @@ eksctl create cluster --name=eksdemo1 \
                       --region=us-east-1 \
                       --zones=us-east-1a,us-east-1b \
                       --without-nodegroup 
+# Example:                      
+eksctl create cluster --name=eksdemo1 \
+                      --region=ap-south-1 \
+                      --zones=ap-south-1a,ap-south-1b \
+                      --without-nodegroup 
 
 # Get List of clusters
 
