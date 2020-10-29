@@ -167,3 +167,5 @@ kubectl get pods -n kube-system
 # Verify logs
 kubectl logs -f $(kubectl get po -n kube-system | egrep -o 'alb-ingress-controller-[A-Za-z0-9-]+') -n kube-system
 ```
+
+example : kubectl logs -f alb-ingress-controller-5bb6744459-jt5bt -n kube-system
