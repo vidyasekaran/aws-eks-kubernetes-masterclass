@@ -86,6 +86,7 @@ kubectl apply -f kube-manifests/01-MySQL-externalName-Service.yml
 ```
 kubectl run -it --rm --image=mysql:5.7.22 --restart=Never mysql-client -- mysql -h usermgmtdb.c7hldelt9xfp.us-east-1.rds.amazonaws.com -u dbadmin -pdbpassword11
 
+if you get  "Error from server (AlreadyExists): pods "mysql-client" already exists" then try using mysql-client1  instead of mysql-client
 mysql> show schemas;
 mysql> create database usermgmt;
 mysql> show schemas;
