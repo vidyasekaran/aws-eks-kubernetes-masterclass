@@ -149,9 +149,9 @@ kubectl get configmap aws-auth -o yaml -n kube-system
 
 ### Environment Variables for CodeBuild
 ```
-REPOSITORY_URI = 180789647333.dkr.ecr.us-east-1.amazonaws.com/eks-devops-nginx
-EKS_KUBECTL_ROLE_ARN = arn:aws:iam::180789647333:role/EksCodeBuildKubectlRole
-EKS_CLUSTER_NAME = eksdemo1
+REPOSITORY_URI = 162622003497.dkr.ecr.ap-south-1.amazonaws.com/eks-devops-nginx
+EKS_KUBECTL_ROLE_ARN = arn:aws:iam::162622003497:role/EksCodeBuildKubectlRole
+EKS_CLUSTER_NAME = eksdemo3
 ```
 
 ### Review buildspec.yml 
