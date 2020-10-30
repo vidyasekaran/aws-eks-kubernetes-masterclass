@@ -112,6 +112,10 @@ echo '{ "Version": "2012-10-17", "Statement": [ { "Effect": "Allow", "Action": "
 # Associate Inline Policy to our newly created IAM Role
 aws iam put-role-policy --role-name EksCodeBuildKubectlRole --policy-name eks-describe --policy-document file:///tmp/iam-eks-describe-policy
 
+#If role exist you may 
+An error occurred (EntityAlreadyExists) when calling the CreateRole operation: Role with name EksCodeBuildKubectlRole already exists.
+
+
 # Verify the same on Management Console
 ```
 
