@@ -51,6 +51,12 @@ kubectl get pods
 - Clone the git repository from Code Commit to local repository, during the process provide your git credentials generated to login to git repo
 ```
 git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/eks-devops-nginx
+
+If u get error provide username/password like this ( u can get username password from Iam - user -security credentials - HTTPS Git credentials for AWS CodeCommit)
+
+$ git clone https://deployecs-at-162622003497:bsFE7Xcon48r5JZkttAxTrpy4aK2kBwbtN6kBVSg2XU=@git-codecommit.ap-south-1.amazonaws.com/v1/repos/eks-devops-nginx
+
+
 ```
 - Copy all files from course section **11-DevOps-with-AWS-Developer-Tools/Application-Manifests** to local repository
   - buildspec.yml
