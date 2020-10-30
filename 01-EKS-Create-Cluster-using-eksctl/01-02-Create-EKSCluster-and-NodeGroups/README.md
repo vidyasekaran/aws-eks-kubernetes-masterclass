@@ -23,8 +23,14 @@ eksctl create cluster --name=eksdemo1 \
 # Example:                      
 eksctl create cluster --name=eksdemo2 --region=ap-south-1 --zones=ap-south-1a,ap-south-1b --without-nodegroup 
 
-# Get List of clusters
+#IF cluster delete is unclean you may encounter below error while creating cluster
+eksctl-eksdemo2-cluster	DELETE_FAILED	2020-10-29 11:14:34 UTC+0530	EKS cluster (dedicated VPC: true, dedicated IAM: true) [created and managed by eksctl]
 
+# Solution  - login AWS Console -> Cloudformation and delete eksctl-eksdemo2-cluster - 
+#To clean up you may have to delete - VPC, subnets manually associated with it also manually.
+
+
+# Get List of clusters
 eksctl get clusters
 
 # Get any nodes present
