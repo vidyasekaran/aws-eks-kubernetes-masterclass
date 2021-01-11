@@ -29,6 +29,25 @@ eksctl-eksdemo2-cluster	DELETE_FAILED	2020-10-29 11:14:34 UTC+0530	EKS cluster (
 # Solution  - login AWS Console -> Cloudformation and delete eksctl-eksdemo2-cluster - 
 #To clean up you may have to delete - VPC, subnets manually associated with it also manually. Check cloudformation stack events and delete manually
 
+# Error when executing  eksctl and fix 
+
+[ℹ]  eksctl version 0.35.0
+[ℹ]  using region ap-south-1
+[!]  retryable error (EC2MetadataError: failed to make EC2Metadata request
+        status code: 404, request id:
+caused by: <?xml version="1.0" encoding="iso-8859-1"?>
+
+Login AWS - In the navigation bar on the upper right, choose your account name or number and then choose My Security Credentials.
+
+Click on Create Access Key and get the ACCESS KEY ID and also download  csv which has Access key ID	and Secret access key
+
+in terminal where u exectue eksctl  
+
+> aws configure  and provide access key id and secreate access key
+
+
+
+
 
 # Get List of clusters
 eksctl get clusters
